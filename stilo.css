@@ -24,9 +24,9 @@ header
 }
 header h1
 {
-	color: white;
+	color: orange;
 	font-size: 4em;
-	text-shadow:2px 2px fuchsia;
+	text-shadow:2px 2px magenta;
 }
 header,nav,section#contenedor,footer
 {
@@ -34,7 +34,14 @@ header,nav,section#contenedor,footer
     margin:0 auto;
     text-align:center;   
 }
-section#contenedor{
+aside
+{
+    background: rgba(255,242,18,0.5);
+	color:rgb(32,30,30);
+    height:490px;
+}
+section#contenedor
+{
 	background: rgba(255,242,18,0.5);
 	color:rgb(32,30,30);
     margin: 0 auto;
@@ -66,17 +73,18 @@ h4
     text-align:center;
     text-shadow:1px 1px blue;
 }
+section#love{background-color:rgba(255,242,18,0.5);}
 p{
     color:aqua;
     text-shadow:1px 1px black;
 }
 nav
 {
-    background:rgba(125,2,183,0.5);
+    background:rgba(125,2,11,0.5);
     color:fuchsia;
     height:2px;
     margin:0 auto;
-    max-width:92.2%;
+    max-width:92.6%;
     padding:3em;
     text-align:center;
 }
@@ -87,9 +95,8 @@ nav a{
     font-weight: bold;
     text-decoration: none;
 }
-
 nav a:hover{
-    color:#F60;
+    color:blue;
 }
 nav div ul{
     list-style:none;
@@ -100,10 +107,10 @@ div li {
     vertical-align: top;
 }
 div a {
-    background: #FFF;
+    background: aqua;
     border: 0.1em solid aqua;
     border-radius: 0.25em;
-    color: violet;
+    color: green;
     display: block;
     font-family:Helvetica, Verdana;
     font-size: 1.1em;
@@ -135,10 +142,62 @@ div#tab a {
     font-size: 1.1em;
     padding: 0.2em;
 }
+@media (max-width: 480px) {
+    nav {
+        display: none;
+    }
+    footer{
+        display: block;
+    }
+    h4{display:block;}
+    section#contenedor {
+        display: block;
+        width: 100%;
+    }
+    header{
+        width: 40%;
+        font-size: 1em;
+    }
+}
+    aside h3
+    {
+        color:purple;
+        text-align:center;
+    }
+@media (min-width: 700px) {
+    aside {
+        display: none;
+        width: 55%;
+    }
+    section#contenedor {
+        width: 60%;
+        margin: 0;
+        padding: 0;
+    }
+    section#contenedor, aside {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
+@media (min-width: 1000px) {
+    aside {
+        display: none;
+        width: 36%;
+    }
+    section#contenedor {
+        width: 63%;
+        margin: 0;
+        padding: 0;
+    }
+    section#contenedor, aside {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
 footer
 {
     background:rgba(255,242,18,0.5);
-    color:fuchsia;
+    color:blue;
     max-width:97%;
     padding:1em;
     text-align:center;
